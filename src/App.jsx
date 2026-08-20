@@ -1,19 +1,32 @@
 import "./App.css";
+
 import Navbar from "./components/Navbar/Navbar";
 import Sidebar from "./components/Sidebar/Sidebar";
 
+import Dashboard from "./Pages/Dashboard/Dashboard";
+
 function App() {
     return (
-        <>
+        <div className="app">
+
+            {/* Top Navbar */}
             <Navbar />
-            <div className="layout">
+
+            <div className="app-body">
+
+                {/* Sidebar */}
                 <Sidebar />
-                <main className="content">
-                    <h1>Welcome back!</h1>
-                    <p>This is your dashboard.</p>
+
+                {/* Page Content */}
+                <main className="main-content">
+
+                    <Dashboard />
+
                 </main>
+
             </div>
-        </>
+
+        </div>
     );
 }
 
