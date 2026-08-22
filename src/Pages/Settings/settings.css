@@ -1,0 +1,1108 @@
+/* =========================================
+   SETTINGS PAGE
+========================================= */
+
+.settings-page {
+    width: 100%;
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    padding: 38px 42px 60px;
+
+    background: #f8fafc;
+
+    color: #111827;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.settings-header {
+    margin-bottom: 30px;
+}
+
+.settings-header h1 {
+    margin: 0;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+}
+
+.settings-header p {
+    margin: 7px 0 0;
+
+    font-size: 14px;
+
+    color: #6b7280;
+}
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.settings-section {
+    margin-bottom: 26px;
+}
+
+.settings-section-header {
+    margin-bottom: 12px;
+}
+
+.settings-section-header h2 {
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: 650;
+}
+
+.settings-section-header p {
+    margin: 5px 0 0;
+
+    font-size: 11px;
+
+    color: #9ca3af;
+}
+
+
+/* =========================================
+   PROFILE CARD
+========================================= */
+
+.profile-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 11px;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+/* =========================================
+   PROFILE AVATAR
+========================================= */
+
+.profile-avatar {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   PROFILE INFORMATION
+========================================= */
+
+.profile-info {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.profile-info h3 {
+    margin: 0;
+
+    font-size: 14px;
+
+    font-weight: 650;
+
+    color: #111827;
+}
+
+.profile-info p {
+    margin: 5px 0 0;
+
+    font-size: 11px;
+
+    color: #9ca3af;
+}
+
+
+/* =========================================
+   EDIT PROFILE BUTTON
+========================================= */
+
+.edit-profile-button {
+    height: 36px;
+
+    padding: 0 14px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #374151;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.15s ease;
+}
+
+.edit-profile-button:hover {
+    background: #f9fafb;
+
+    border-color: #9ca3af;
+}
+
+
+/* =========================================
+   SETTINGS CARD
+========================================= */
+
+.settings-card {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 11px;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+/* =========================================
+   SETTINGS ROW
+========================================= */
+
+.setting-row {
+    min-height: 72px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 16px 20px;
+
+    border-bottom: 1px solid #f0f1f3;
+}
+
+.setting-row:last-child {
+    border-bottom: none;
+}
+
+
+/* =========================================
+   SETTING CONTENT
+========================================= */
+
+.setting-content {
+    min-width: 0;
+}
+
+.setting-content h3 {
+    margin: 0;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+.setting-content p {
+    margin: 5px 0 0;
+
+    font-size: 11px;
+
+    color: #9ca3af;
+}
+
+
+/* =========================================
+   SELECT
+========================================= */
+
+.settings-select {
+    width: 130px;
+
+    height: 36px;
+
+    padding: 0 10px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #374151;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition: 0.15s ease;
+}
+
+.settings-select:hover {
+    border-color: #9ca3af;
+}
+
+.settings-select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================================
+   TOGGLE
+========================================= */
+
+.toggle {
+    position: relative;
+
+    display: inline-block;
+
+    width: 40px;
+    height: 22px;
+
+    flex-shrink: 0;
+}
+
+.toggle input {
+    width: 0;
+    height: 0;
+
+    opacity: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 20px;
+
+    background: #d1d5db;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.toggle-slider::before {
+    content: "";
+
+    position: absolute;
+
+    width: 16px;
+    height: 16px;
+
+    left: 3px;
+    top: 3px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.2);
+
+    transition: 0.2s ease;
+}
+
+.toggle input:checked + .toggle-slider {
+    background: #2563eb;
+}
+
+.toggle input:checked + .toggle-slider::before {
+    transform: translateX(18px);
+}
+
+
+/* =========================================
+   SECONDARY BUTTON
+========================================= */
+
+.secondary-button {
+    height: 34px;
+
+    padding: 0 13px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #374151;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.15s ease;
+}
+
+.secondary-button:hover {
+    background: #f9fafb;
+
+    border-color: #9ca3af;
+}
+
+
+/* =========================================
+   DANGER BUTTON
+========================================= */
+
+.danger-button {
+    height: 34px;
+
+    padding: 0 13px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #fecaca;
+
+    border-radius: 7px;
+
+    background: #fffafa;
+
+    color: #dc2626;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.15s ease;
+}
+
+.danger-button:hover {
+    background: #fef2f2;
+
+    border-color: #fca5a5;
+}
+
+
+/* =========================================
+   DANGER ZONE
+========================================= */
+
+.danger-zone {
+    margin-top: 35px;
+}
+
+.danger-card {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #fecaca;
+
+    border-radius: 11px;
+}
+
+.danger-card h3 {
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #b91c1c;
+}
+
+.danger-card p {
+    margin: 5px 0 0;
+
+    font-size: 11px;
+
+    color: #9ca3af;
+}
+
+
+/* =========================================
+   DELETE BUTTON
+========================================= */
+
+.delete-button {
+    height: 36px;
+
+    padding: 0 14px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #dc2626;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #dc2626;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.15s ease;
+}
+
+.delete-button:hover {
+    background: #fef2f2;
+}
+
+
+/* =========================================
+   EDIT PROFILE MODAL
+========================================= */
+
+.profile-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(15, 23, 42, 0.55);
+
+    backdrop-filter: blur(4px);
+
+    z-index: 1000;
+}
+
+
+/* =========================================
+   PROFILE MODAL
+========================================= */
+
+.profile-modal {
+    width: 460px;
+
+    max-width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(15, 23, 42, 0.18);
+
+    animation: profileModalIn 0.18s ease-out;
+}
+
+
+@keyframes profileModalIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(10px)
+            scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================
+   MODAL HEADER
+========================================= */
+
+.profile-modal-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    padding: 22px 24px 18px;
+
+    border-bottom: 1px solid #eef0f3;
+}
+
+.profile-modal-header h2 {
+    margin: 0;
+
+    color: #111827;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.2px;
+}
+
+.profile-modal-header p {
+    margin: 6px 0 0;
+
+    color: #9ca3af;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.close-profile {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #6b7280;
+
+    font-family: inherit;
+
+    font-size: 20px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: 0.15s ease;
+}
+
+.close-profile:hover {
+    background: #f3f4f6;
+
+    color: #111827;
+
+    border-color: #d1d5db;
+}
+
+
+/* =========================================
+   PROFILE FORM
+========================================= */
+
+.profile-form {
+    padding: 22px 24px 24px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.profile-form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.profile-form-group label {
+    color: #374151;
+
+    font-size: 11px;
+
+    font-weight: 650;
+}
+
+
+/* =========================================
+   FORM INPUT
+========================================= */
+
+.profile-form-group input {
+    width: 100%;
+
+    height: 42px;
+
+    box-sizing: border-box;
+
+    padding: 0 12px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #111827;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    outline: none;
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.15s ease;
+}
+
+.profile-form-group input::placeholder {
+    color: #9ca3af;
+}
+
+.profile-form-group input:hover {
+    border-color: #9ca3af;
+}
+
+.profile-form-group input:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================================
+   FORM ACTIONS
+========================================= */
+
+.profile-form-actions {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 9px;
+
+    margin-top: 6px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #eef0f3;
+}
+
+
+/* =========================================
+   CANCEL BUTTON
+========================================= */
+
+.cancel-profile {
+    height: 38px;
+
+    padding: 0 16px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #374151;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition: 0.15s ease;
+}
+
+.cancel-profile:hover {
+    background: #f9fafb;
+
+    border-color: #9ca3af;
+}
+
+
+/* =========================================
+   SAVE BUTTON
+========================================= */
+
+.save-profile {
+    height: 38px;
+
+    padding: 0 16px;
+
+    border: 1px solid #2563eb;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 1px 2px rgba(37, 99, 235, 0.15);
+
+    transition: 0.15s ease;
+}
+
+.save-profile:hover {
+    background: #1d4ed8;
+
+    border-color: #1d4ed8;
+}
+
+.save-profile:active {
+    transform: translateY(1px);
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+.app.dark-mode .settings-page {
+    background: #111827;
+
+    color: #f9fafb;
+}
+
+
+.app.dark-mode .settings-header p,
+.app.dark-mode .settings-section-header p {
+    color: #9ca3af;
+}
+
+
+/* Cards */
+
+.app.dark-mode .settings-card,
+.app.dark-mode .profile-card {
+    background: #1f2937;
+
+    border-color: #374151;
+}
+
+
+/* Rows */
+
+.app.dark-mode .setting-row {
+    border-color: #374151;
+}
+
+
+/* Text */
+
+.app.dark-mode .setting-content h3,
+.app.dark-mode .profile-info h3 {
+    color: #f3f4f6;
+}
+
+
+.app.dark-mode .setting-content p,
+.app.dark-mode .profile-info p {
+    color: #9ca3af;
+}
+
+
+/* Select */
+
+.app.dark-mode .settings-select {
+    background: #111827;
+
+    border-color: #4b5563;
+
+    color: #f3f4f6;
+}
+
+
+/* Edit profile */
+
+.app.dark-mode .edit-profile-button {
+    background: #1f2937;
+
+    border-color: #4b5563;
+
+    color: #f3f4f6;
+}
+
+.app.dark-mode .edit-profile-button:hover {
+    background: #374151;
+}
+
+
+/* Danger */
+
+.app.dark-mode .danger-card {
+    background: #1f2937;
+
+    border-color: #7f1d1d;
+}
+
+
+/* =========================================
+   DARK MODE - PROFILE MODAL
+========================================= */
+
+.app.dark-mode .profile-modal {
+    background: #1f2937;
+
+    border-color: #374151;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+
+.app.dark-mode .profile-modal-header {
+    border-color: #374151;
+}
+
+
+.app.dark-mode .profile-modal-header h2 {
+    color: #f9fafb;
+}
+
+
+.app.dark-mode .profile-modal-header p {
+    color: #9ca3af;
+}
+
+
+/* Close */
+
+.app.dark-mode .close-profile {
+    background: #1f2937;
+
+    border-color: #4b5563;
+
+    color: #9ca3af;
+}
+
+.app.dark-mode .close-profile:hover {
+    background: #374151;
+
+    color: #ffffff;
+}
+
+
+/* Labels */
+
+.app.dark-mode .profile-form-group label {
+    color: #e5e7eb;
+}
+
+
+/* Inputs */
+
+.app.dark-mode .profile-form-group input {
+    background: #111827;
+
+    border-color: #4b5563;
+
+    color: #f9fafb;
+}
+
+.app.dark-mode .profile-form-group input:hover {
+    border-color: #6b7280;
+}
+
+
+/* Form footer */
+
+.app.dark-mode .profile-form-actions {
+    border-color: #374151;
+}
+
+
+/* Cancel */
+
+.app.dark-mode .cancel-profile {
+    background: #1f2937;
+
+    border-color: #4b5563;
+
+    color: #e5e7eb;
+}
+
+.app.dark-mode .cancel-profile:hover {
+    background: #374151;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .settings-page {
+        padding: 28px 20px 45px;
+    }
+
+
+    .profile-card {
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+
+    .edit-profile-button {
+        width: 100%;
+    }
+
+
+    .setting-row {
+        align-items: flex-start;
+
+        padding: 16px;
+
+        gap: 15px;
+    }
+
+
+    .setting-content {
+        flex: 1;
+    }
+
+
+    .danger-card {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .delete-button {
+        width: 100%;
+    }
+
+
+    .profile-modal {
+        width: 100%;
+    }
+
+
+    .profile-modal-header {
+        padding: 20px;
+    }
+
+
+    .profile-form {
+        padding: 20px;
+    }
+
+
+    .profile-form-actions {
+        flex-direction: column-reverse;
+    }
+
+
+    .cancel-profile,
+    .save-profile {
+        width: 100%;
+    }
+
+}

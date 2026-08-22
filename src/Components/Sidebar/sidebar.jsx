@@ -1,24 +1,56 @@
 import "./Sidebar.css";
 
+import { NavLink } from "react-router-dom";
+
 function Sidebar() {
     return (
         <aside className="sidebar">
 
-            <ul>
+            <nav className="sidebar-nav">
 
-                <li>Dashboard</li>
+                <NavLink
+                    to="/dashboard"
+                    className="sidebar-link"
+                >
+                    Dashboard
+                </NavLink>
 
-                <li>My Tasks</li>
+                <NavLink
+                    to="/habits"
+                    className="sidebar-link"
+                >
+                    Habit Tracker
+                </NavLink>
 
-                <li>Analytics</li>
+                <NavLink
+                    to="/tasks"
+                    className="sidebar-link"
+                >
+                    My Tasks
+                </NavLink>
 
-                <li>Calendar</li>
+                <NavLink
+                    to="/analytics"
+                    className="sidebar-link"
+                >
+                    Analytics
+                </NavLink>
 
-                <li>Settings</li>
+                <NavLink
+                    to="/calendar"
+                    className="sidebar-link"
+                >
+                    Calendar
+                </NavLink>
 
-                <li>Logout</li>
+                <NavLink
+                    to="/settings"
+                    className="sidebar-link"
+                >
+                    Settings
+                </NavLink>
 
-            </ul>
+            </nav>
 
         </aside>
     );

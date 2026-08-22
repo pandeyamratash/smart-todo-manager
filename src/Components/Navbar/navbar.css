@@ -1,14 +1,24 @@
 .navbar {
-    height: 70px;
+    width: 100%;
+    height: 64px;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 28px;
 
-    padding: 0 30px;
+    background:white;
+    color:black;
 
-    background: white;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #1f2937;
+}
+
+.navbar h1,
+.navbar h2,
+.navbar p,
+.navbar span,
+.navbar a {
+    color: #ffffff;
 }
 
 .navbar-brand {
@@ -17,6 +27,7 @@
 }
 
 .navbar-actions {
+    margin-left: auto;
     display: flex;
     align-items: center;
     gap: 15px;

@@ -5,7 +5,7 @@ function Dashboard() {
         <div className="dashboard-page">
 
             {/* =========================
-                HEADER
+                DASHBOARD HEADER
             ========================== */}
 
             <div className="dashboard-heading">
@@ -37,9 +37,7 @@ function Dashboard() {
 
                     <strong>24</strong>
 
-                    <p>
-                        All your tasks
-                    </p>
+                    <p>All your tasks</p>
 
                 </div>
 
@@ -50,9 +48,7 @@ function Dashboard() {
 
                     <strong>14</strong>
 
-                    <p>
-                        58% completion
-                    </p>
+                    <p>58% completion</p>
 
                 </div>
 
@@ -63,9 +59,7 @@ function Dashboard() {
 
                     <strong>8</strong>
 
-                    <p>
-                        Tasks remaining
-                    </p>
+                    <p>Tasks remaining</p>
 
                 </div>
 
@@ -76,9 +70,7 @@ function Dashboard() {
 
                     <strong>2</strong>
 
-                    <p>
-                        Need attention
-                    </p>
+                    <p>Need attention</p>
 
                 </div>
 
@@ -94,11 +86,13 @@ function Dashboard() {
                 <div className="section-title">
 
                     <div>
+
                         <h2>Productivity Overview</h2>
 
                         <p>
                             Track your productivity and task completion.
                         </p>
+
                     </div>
 
                 </div>
@@ -114,9 +108,7 @@ function Dashboard() {
 
                         <strong>4h 35m</strong>
 
-                        <p>
-                            This week
-                        </p>
+                        <p>This week</p>
 
                     </div>
 
@@ -133,13 +125,14 @@ function Dashboard() {
 
                         </div>
 
+
                         <div className="dashboard-progress">
 
-                            <div
-                                className="dashboard-progress-value"
-                            ></div>
+                            <div className="dashboard-progress-value">
+                            </div>
 
                         </div>
+
 
                         <p>
                             14 of 24 tasks completed
@@ -161,17 +154,22 @@ function Dashboard() {
                 <div className="section-title">
 
                     <div>
+
                         <h2>Task Progress</h2>
 
                         <p>
                             Current distribution of your tasks.
                         </p>
+
                     </div>
 
                 </div>
 
 
                 <div className="task-progress">
+
+
+                    {/* Completed */}
 
                     <div className="progress-item">
 
@@ -183,16 +181,18 @@ function Dashboard() {
 
                         </div>
 
+
                         <div className="progress-bar">
 
-                            <div
-                                className="completed-progress"
-                            ></div>
+                            <div className="completed-progress">
+                            </div>
 
                         </div>
 
                     </div>
 
+
+                    {/* Pending */}
 
                     <div className="progress-item">
 
@@ -204,16 +204,18 @@ function Dashboard() {
 
                         </div>
 
+
                         <div className="progress-bar">
 
-                            <div
-                                className="pending-progress"
-                            ></div>
+                            <div className="pending-progress">
+                            </div>
 
                         </div>
 
                     </div>
 
+
+                    {/* Overdue */}
 
                     <div className="progress-item">
 
@@ -225,11 +227,11 @@ function Dashboard() {
 
                         </div>
 
+
                         <div className="progress-bar">
 
-                            <div
-                                className="overdue-progress"
-                            ></div>
+                            <div className="overdue-progress">
+                            </div>
 
                         </div>
 
@@ -249,12 +251,15 @@ function Dashboard() {
                 <div className="section-title">
 
                     <div>
+
                         <h2>Upcoming Tasks</h2>
 
                         <p>
                             Tasks that need your attention.
                         </p>
+
                     </div>
+
 
                     <button className="view-all">
                         View All
@@ -265,11 +270,16 @@ function Dashboard() {
 
                 <div className="upcoming-tasks">
 
+
+                    {/* Task 1 */}
+
                     <div className="upcoming-task">
 
                         <div className="task-details">
 
-                            <h3>Complete React Project</h3>
+                            <h3>
+                                Complete React Project
+                            </h3>
 
                             <p>
                                 Build the dashboard interface
@@ -277,9 +287,11 @@ function Dashboard() {
 
                         </div>
 
+
                         <span className="task-priority high">
                             High
                         </span>
+
 
                         <span className="task-deadline">
                             Today
@@ -288,11 +300,15 @@ function Dashboard() {
                     </div>
 
 
+                    {/* Task 2 */}
+
                     <div className="upcoming-task">
 
                         <div className="task-details">
 
-                            <h3>Practice DSA</h3>
+                            <h3>
+                                Practice DSA
+                            </h3>
 
                             <p>
                                 Solve 5 array problems
@@ -300,9 +316,11 @@ function Dashboard() {
 
                         </div>
 
+
                         <span className="task-priority medium">
                             Medium
                         </span>
+
 
                         <span className="task-deadline">
                             Tomorrow
@@ -311,11 +329,15 @@ function Dashboard() {
                     </div>
 
 
+                    {/* Task 3 */}
+
                     <div className="upcoming-task">
 
                         <div className="task-details">
 
-                            <h3>Read ML Research Paper</h3>
+                            <h3>
+                                Read ML Research Paper
+                            </h3>
 
                             <p>
                                 Complete the assigned paper
@@ -323,9 +345,11 @@ function Dashboard() {
 
                         </div>
 
+
                         <span className="task-priority low">
                             Low
                         </span>
+
 
                         <span className="task-deadline">
                             Friday

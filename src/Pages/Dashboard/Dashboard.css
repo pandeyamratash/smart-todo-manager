@@ -15,10 +15,12 @@
     display: flex;
 
     justify-content: space-between;
+
     align-items: center;
 
     margin-bottom: 30px;
 }
+
 
 .dashboard-heading h1 {
     margin: 0 0 7px;
@@ -28,6 +30,7 @@
     color: #000;
 }
 
+
 .dashboard-heading p {
     margin: 0;
 
@@ -35,6 +38,7 @@
 
     font-size: 15px;
 }
+
 
 .dashboard-date {
     padding: 10px 16px;
@@ -66,6 +70,7 @@
     margin-bottom: 25px;
 }
 
+
 .overview-card {
     padding: 22px;
 
@@ -76,6 +81,7 @@
     border-radius: 12px;
 }
 
+
 .overview-card span {
     display: block;
 
@@ -83,6 +89,7 @@
 
     color: #6b7280;
 }
+
 
 .overview-card strong {
     display: block;
@@ -94,6 +101,7 @@
     color: #000;
 }
 
+
 .overview-card p {
     margin: 8px 0 0;
 
@@ -104,7 +112,7 @@
 
 
 /* =========================================
-   DASHBOARD SECTION
+   DASHBOARD SECTIONS
 ========================================= */
 
 .dashboard-section {
@@ -119,6 +127,7 @@
     border-radius: 12px;
 }
 
+
 .section-title {
     display: flex;
 
@@ -129,6 +138,7 @@
     margin-bottom: 22px;
 }
 
+
 .section-title h2 {
     margin: 0;
 
@@ -136,6 +146,7 @@
 
     color: #000;
 }
+
 
 .section-title p {
     margin: 6px 0 0;
@@ -169,11 +180,13 @@
     border-radius: 10px;
 }
 
+
 .focus-summary span {
     font-size: 14px;
 
     color: #6b7280;
 }
+
 
 .focus-summary strong {
     display: block;
@@ -184,6 +197,7 @@
 
     color: #000;
 }
+
 
 .focus-summary p {
     margin: 5px 0 0;
@@ -204,6 +218,7 @@
     border-radius: 10px;
 }
 
+
 .completion-title {
     display: flex;
 
@@ -214,17 +229,22 @@
     margin-bottom: 15px;
 }
 
+
 .completion-title span {
     font-size: 14px;
 
     color: #374151;
 }
 
+
 .completion-title strong {
     font-size: 18px;
 
     color: #000;
 }
+
+
+/* Progress */
 
 .dashboard-progress {
     width: 100%;
@@ -238,6 +258,7 @@
     overflow: hidden;
 }
 
+
 .dashboard-progress-value {
     width: 58%;
 
@@ -247,6 +268,7 @@
 
     border-radius: 10px;
 }
+
 
 .completion-summary p {
     margin: 10px 0 0;
@@ -269,6 +291,7 @@
     gap: 20px;
 }
 
+
 .progress-item-header {
     display: flex;
 
@@ -277,15 +300,18 @@
     margin-bottom: 8px;
 }
 
+
 .progress-item-header span {
     font-size: 14px;
 
     color: #374151;
 }
 
+
 .progress-item-header strong {
     color: #000;
 }
+
 
 .progress-bar {
     width: 100%;
@@ -299,6 +325,7 @@
     overflow: hidden;
 }
 
+
 .completed-progress {
     width: 58%;
 
@@ -307,6 +334,7 @@
     background: #2563eb;
 }
 
+
 .pending-progress {
     width: 33%;
 
@@ -314,6 +342,7 @@
 
     background: #f59e0b;
 }
+
 
 .overdue-progress {
     width: 9%;
@@ -334,6 +363,7 @@
     flex-direction: column;
 }
 
+
 .upcoming-task {
     display: flex;
 
@@ -346,9 +376,11 @@
     border-top: 1px solid #e5e7eb;
 }
 
+
 .task-details {
     flex: 1;
 }
+
 
 .task-details h3 {
     margin: 0 0 5px;
@@ -357,6 +389,7 @@
 
     color: #000;
 }
+
 
 .task-details p {
     margin: 0;
@@ -367,7 +400,9 @@
 }
 
 
-/* Priority */
+/* =========================================
+   PRIORITY
+========================================= */
 
 .task-priority {
     padding: 6px 11px;
@@ -379,17 +414,20 @@
     font-weight: 600;
 }
 
+
 .task-priority.high {
     background: #fee2e2;
 
     color: #dc2626;
 }
 
+
 .task-priority.medium {
     background: #fef3c7;
 
     color: #d97706;
 }
+
 
 .task-priority.low {
     background: #dcfce7;
@@ -398,7 +436,9 @@
 }
 
 
-/* Deadline */
+/* =========================================
+   DEADLINE
+========================================= */
 
 .task-deadline {
     min-width: 80px;
@@ -409,7 +449,9 @@
 }
 
 
-/* View All */
+/* =========================================
+   VIEW ALL BUTTON
+========================================= */
 
 .view-all {
     padding: 8px 14px;
@@ -420,8 +462,11 @@
 
     background: white;
 
+    color: #374151;
+
     cursor: pointer;
 }
+
 
 .view-all:hover {
     background: #f3f4f6;
@@ -438,6 +483,7 @@
         grid-template-columns: 1fr 1fr;
     }
 
+
     .productivity-overview {
         grid-template-columns: 1fr;
     }
@@ -450,11 +496,15 @@
         align-items: flex-start;
 
         flex-direction: column;
+
+        gap: 15px;
     }
+
 
     .overview-cards {
         grid-template-columns: 1fr;
     }
+
 
     .upcoming-task {
         align-items: flex-start;

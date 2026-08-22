@@ -1,29 +1,5 @@
 /* =========================================
-   GLOBAL
-========================================= */
-
-* {
-    box-sizing: border-box;
-}
-
-html,
-body,
-#root {
-    width: 100%;
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background: #f5f7fb;
-    color: #1f2937;
-}
-
-
-/* =========================================
-   APP
+   GLOBAL APP LAYOUT
 ========================================= */
 
 .app {
@@ -33,13 +9,15 @@ body {
 
 
 /* =========================================
-   APP BODY
+   NAVBAR + SIDEBAR AREA
 ========================================= */
 
 .app-body {
     display: flex;
+
     width: 100%;
-    min-height: calc(100vh - 70px);
+
+    min-height: calc(100vh - 64px);
 }
 
 
@@ -49,369 +27,46 @@ body {
 
 .main-content {
     flex: 1;
+
     min-width: 0;
 
-    padding: 35px;
+    padding: 30px;
 
-    overflow-y: auto;
+    background-color: #f8fafc;
+
+    overflow-x: hidden;
 }
 
 
 /* =========================================
-   DASHBOARD HEADER
+   PAGE CONTAINER
 ========================================= */
 
-.dashboard-header {
-    margin-bottom: 30px;
-}
-
-.header-text h1 {
-    margin: 0 0 8px;
-
-    font-size: 32px;
-    font-weight: 700;
-
-    color: #000;
-}
-
-.header-text p {
-    margin: 0;
-
-    font-size: 16px;
-
-    color: #6b7280;
-}
-
-
-/* =========================================
-   DASHBOARD PANELS
-========================================= */
-
-.dashboard-panels {
-    display: grid;
-
-    grid-template-columns: 1fr 1.5fr;
-
-    gap: 25px;
-
-    margin-bottom: 25px;
-}
-
-
-/* =========================================
-   COMMON PANEL
-========================================= */
-
-.focus-panel,
-.insights-panel,
-.productivity-card {
-    background: #ffffff;
-
-    border: 1px solid #e5e7eb;
-
-    border-radius: 12px;
-
-    padding: 25px;
-}
-
-
-/* =========================================
-   PANEL HEADER
-========================================= */
-
-.panel-header {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-}
-
-.panel-header h2 {
-    margin: 0;
-
-    font-size: 21px;
-
-    color: #000;
-}
-
-.panel-description {
-    margin: 6px 0 0;
-
-    font-size: 14px;
-
-    color: #6b7280;
-}
-
-
-/* =========================================
-   TIMER
-========================================= */
-
-.session-status {
-    padding: 5px 10px;
-
-    border-radius: 20px;
-
-    background: #dcfce7;
-
-    color: #16a34a;
-
-    font-size: 12px;
-
-    font-weight: 600;
-}
-
-
-/* Timer Modes */
-
-.timer-mode {
-    display: flex;
-
-    justify-content: center;
-
-    gap: 8px;
-
-    margin-top: 25px;
-}
-
-.timer-mode button {
-    padding: 8px 18px;
-
-    border: none;
-
-    border-radius: 7px;
-
-    background: #f3f4f6;
-
-    color: #374151;
-
-    cursor: pointer;
-
-    font-size: 14px;
-}
-
-.timer-mode button:hover {
-    background: #e5e7eb;
-}
-
-.timer-mode button.active {
-    background: #2563eb;
-
-    color: white;
-}
-
-
-/* Timer Display */
-
-.timer-display {
-    text-align: center;
-
-    margin: 25px 0;
-
-    font-size: 64px;
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
-
-    color: #111827;
-}
-
-
-/* Timer Controls */
-
-.timer-controls {
-    display: flex;
-
-    justify-content: center;
-
-    gap: 10px;
-}
-
-.start-timer {
-    padding: 11px 24px;
-
-    border: none;
-
-    border-radius: 8px;
-
-    background: #2563eb;
-
-    color: white;
-
-    font-weight: 600;
-
-    cursor: pointer;
-}
-
-.start-timer:hover {
-    background: #1d4ed8;
-}
-
-.reset-timer {
-    padding: 11px 20px;
-
-    border: 1px solid #d1d5db;
-
-    border-radius: 8px;
-
-    background: white;
-
-    color: #374151;
-
-    cursor: pointer;
-}
-
-.reset-timer:hover {
-    background: #f3f4f6;
-}
-
-
-/* =========================================
-   TASK INSIGHTS
-========================================= */
-
-.insight-grid {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 15px;
-
-    margin-top: 20px;
-}
-
-
-/* Individual Insight */
-
-.insight {
-    padding: 18px;
-
-    background: #f9fafb;
-
-    border: 1px solid #f0f0f0;
-
-    border-radius: 9px;
-}
-
-.insight span {
-    display: block;
-
-    font-size: 14px;
-
-    color: #6b7280;
-}
-
-.insight strong {
-    display: block;
-
-    margin-top: 6px;
-
-    font-size: 27px;
-
-    color: #000;
-}
-
-
-/* =========================================
-   COMPLETION RATE
-========================================= */
-
-.completion {
-    margin-top: 25px;
-}
-
-.completion-header {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    margin-bottom: 9px;
-
-    font-size: 14px;
-}
-
-.completion-header strong {
-    color: #000;
-}
-
-
-/* Progress Bar */
-
-.progress {
+.main-content > * {
     width: 100%;
-
-    height: 9px;
-
-    overflow: hidden;
-
-    border-radius: 10px;
-
-    background: #e5e7eb;
-}
-
-.progress-value {
-    width: 42%;
-
-    height: 100%;
-
-    border-radius: 10px;
-
-    background: #2563eb;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
 /* =========================================
-   TODAY'S PRODUCTIVITY
+   BUTTON RESET
 ========================================= */
 
-.productivity-card {
-    margin-bottom: 25px;
+button {
+    font-family: inherit;
 }
 
 
-/* Productivity Stats */
+/* =========================================
+   INPUT RESET
+========================================= */
 
-.productivity-stats {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 15px;
-
-    margin-top: 22px;
-}
-
-.productivity-stat {
-    padding: 18px;
-
-    background: #f9fafb;
-
-    border-radius: 9px;
-
-    border: 1px solid #f0f0f0;
-}
-
-.productivity-stat span {
-    display: block;
-
-    font-size: 14px;
-
-    color: #6b7280;
-}
-
-.productivity-stat strong {
-    display: block;
-
-    margin-top: 7px;
-
-    font-size: 24px;
-
-    color: #000;
+input,
+textarea,
+select {
+    font-family: inherit;
 }
 
 
@@ -419,33 +74,19 @@ body {
    RESPONSIVE DESIGN
 ========================================= */
 
-@media (max-width: 1000px) {
-
-    .dashboard-panels {
-        grid-template-columns: 1fr;
-    }
-
-    .productivity-stats {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 
     .main-content {
         padding: 20px;
     }
 
-    .insight-grid {
-        grid-template-columns: 1fr;
+}
+
+
+@media (max-width: 500px) {
+
+    .main-content {
+        padding: 15px;
     }
 
-    .productivity-stats {
-        grid-template-columns: 1fr;
-    }
-
-    .timer-display {
-        font-size: 52px;
-    }
 }

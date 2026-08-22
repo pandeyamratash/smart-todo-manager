@@ -1,0 +1,608 @@
+/* =====================================================
+   ANALYTICS PAGE
+===================================================== */
+
+.analytics-page {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 38px 42px 60px;
+
+    box-sizing: border-box;
+
+    background: #f8fafc;
+
+    color: #111827;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.analytics-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+
+.analytics-header h1 {
+    margin: 0;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.6px;
+}
+
+
+.analytics-header p {
+    margin: 8px 0 0;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+.analytics-period {
+    height: 42px;
+
+    padding: 0 35px 0 13px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #374151;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    outline: none;
+}
+
+
+/* =====================================================
+   OVERVIEW CARDS
+===================================================== */
+
+.analytics-overview {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 16px;
+
+    margin-bottom: 20px;
+}
+
+
+.analytics-card {
+    min-height: 125px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    transition: all 0.2s ease;
+}
+
+
+.analytics-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 18px rgba(15, 23, 42, 0.05);
+}
+
+
+.analytics-card-label {
+    margin-bottom: 9px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.7px;
+
+    color: #9ca3af;
+}
+
+
+.analytics-card strong {
+    font-size: 28px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    color: #111827;
+}
+
+
+.analytics-card-subtext {
+    margin-top: 9px;
+
+    font-size: 11px;
+
+    color: #9ca3af;
+}
+
+
+.analytics-card-subtext.success {
+    color: #16a34a;
+}
+
+
+/* =====================================================
+   CHART ROW
+===================================================== */
+
+.analytics-chart-row {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.8fr)
+        minmax(280px, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   PANELS
+===================================================== */
+
+.analytics-panel {
+    padding: 22px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+}
+
+
+.large-panel {
+    min-height: 350px;
+}
+
+
+.panel-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 20px;
+}
+
+
+.panel-header h2 {
+    margin: 0;
+
+    font-size: 16px;
+
+    font-weight: 650;
+
+    color: #111827;
+}
+
+
+.panel-header p {
+    margin: 5px 0 0;
+
+    font-size: 11px;
+
+    color: #9ca3af;
+}
+
+
+/* =====================================================
+   LINE CHART
+===================================================== */
+
+.line-chart {
+    display: flex;
+
+    height: 250px;
+}
+
+
+.chart-y-axis {
+    width: 32px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding-bottom: 27px;
+
+    box-sizing: border-box;
+
+    font-size: 10px;
+
+    color: #9ca3af;
+
+    text-align: right;
+}
+
+
+.chart-area {
+    position: relative;
+
+    flex: 1;
+
+    height: 100%;
+}
+
+
+.chart-grid {
+    position: absolute;
+
+    inset: 0 0 27px 0;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            #f1f5f9 0,
+            #f1f5f9 1px,
+            transparent 1px,
+            transparent 25%
+        );
+}
+
+
+.chart-line {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: calc(100% - 27px);
+
+    color: #2563eb;
+
+    overflow: visible;
+}
+
+
+.chart-line circle {
+    fill: #2563eb;
+}
+
+
+.chart-x-axis {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 10px;
+
+    color: #9ca3af;
+}
+
+
+/* =====================================================
+   DONUT CHART
+===================================================== */
+
+.donut-container {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 15px 0 20px;
+}
+
+
+.donut-chart {
+    width: 155px;
+
+    height: 155px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        conic-gradient(
+            #2563eb 0deg 266deg,
+            #e5e7eb 266deg 360deg
+        );
+
+    position: relative;
+}
+
+
+.donut-chart::after {
+    content: "";
+
+    position: absolute;
+
+    width: 105px;
+
+    height: 105px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+}
+
+
+.donut-center {
+    position: relative;
+
+    z-index: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.donut-center strong {
+    font-size: 24px;
+
+    color: #111827;
+}
+
+
+.donut-center span {
+    margin-top: 3px;
+
+    font-size: 10px;
+
+    color: #9ca3af;
+}
+
+
+/* =====================================================
+   LEGEND
+===================================================== */
+
+.chart-legend {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 11px;
+
+    border-top: 1px solid #f1f5f9;
+
+    padding-top: 16px;
+}
+
+
+.legend-item {
+    display: grid;
+
+    grid-template-columns: 9px 1fr auto;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 12px;
+
+    color: #6b7280;
+}
+
+
+.legend-item strong {
+    color: #111827;
+}
+
+
+.legend-dot {
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+}
+
+
+.completed-dot {
+    background: #2563eb;
+}
+
+
+.pending-dot {
+    background: #d1d5db;
+}
+
+
+/* =====================================================
+   PRODUCTIVITY BAR CHART
+===================================================== */
+
+.productivity-panel {
+    min-height: 330px;
+
+    margin-bottom: 20px;
+}
+
+
+.bar-chart {
+    height: 230px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-around;
+
+    gap: 25px;
+
+    padding: 20px 30px 0;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 24%,
+            #f1f5f9 25%
+        );
+}
+
+
+.bar-item {
+    height: 100%;
+
+    flex: 1;
+
+    max-width: 65px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+}
+
+
+.bar {
+    width: 100%;
+
+    min-height: 15px;
+
+    border-radius: 6px 6px 0 0;
+
+    background: #2563eb;
+
+    transition:
+        height 0.3s ease,
+        opacity 0.2s ease;
+}
+
+
+.bar:hover {
+    opacity: 0.8;
+}
+
+
+.bar-item span {
+    font-size: 10px;
+
+    color: #9ca3af;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .analytics-overview {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .analytics-chart-row {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .analytics-page {
+        padding: 25px 16px 45px;
+    }
+
+
+    .analytics-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+
+    .analytics-period {
+        width: 100%;
+    }
+
+
+    .analytics-overview {
+        grid-template-columns: 1fr;
+    }
+
+
+    .analytics-panel {
+        padding: 17px;
+    }
+
+
+    .bar-chart {
+        gap: 8px;
+
+        padding-left: 8px;
+
+        padding-right: 8px;
+    }
+
+}
